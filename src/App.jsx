@@ -2,6 +2,7 @@ import {NavBar} from './components/NavBar'
 import {Hero} from './components/Hero'
 import {About} from './components/About'
 import {Technologies} from "./components/Technologies";
+import { Experiences } from "./components/Experiences.jsx";
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
                 <Hero/>
                 <About/>
                 <Technologies/>
+                <Experiences/>
             </div>
         </div>
     )
