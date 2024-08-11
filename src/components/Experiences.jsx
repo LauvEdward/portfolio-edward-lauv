@@ -2,11 +2,11 @@ import {EXPERIENCES} from "../constants/index.js"
 
 export const Experiences = () => {
     return (
-        <div className="border-b border-neutral-500 p-4">
+        <div className="border-b border-neutral-900 p-4">
             <h1 className="text-center text-4xl pb-10">Experiences</h1>
             <div>
                 {EXPERIENCES.map((EXPERIENCE, i) => (
-                    <div key={i} className="border-neutral-500 flex flex-wrap lg:justify-center">
+                    <div key={i} className="border-neutral-500 flex flex-wrap lg:justify-center pt-5">
                         <div className="w-full lg:w-1/4">
                             <p className="text-neutral-400 text-sm">{EXPERIENCE.year}</p>
                         </div>
