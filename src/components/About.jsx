@@ -12,8 +12,8 @@ export const About = () => {
                         <img className="rounded-2xl" src={profilePic}/>
                     </div>
                 </div>
-                <div className="w-full lg:w-1/2 lg:p-8">
-                    <div className="flex items-center justify-items-start">
+                <div className="w-full lg:w-1/2 lg:p-8 my-4">
+                    <div className="flex items-center justify-center">
                         <p className="tracking-tighter font-light max-w-xl"> {ABOUT_TEXT} </p>
                     </div>
 

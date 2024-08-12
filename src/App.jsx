@@ -2,6 +2,9 @@ import {NavBar} from './components/NavBar'
 import {Hero} from './components/Hero'
 import {About} from './components/About'
 import {Technologies} from "./components/Technologies";
+import { Experiences } from "./components/Experiences.jsx";
+import {Projects} from "./components/Projects.jsx";
+import Contract from './components/Contract.jsx';
 
 const App = () => {
     return (
@@ -15,6 +18,9 @@ const App = () => {
                 <Hero/>
                 <About/>
                 <Technologies/>
+                <Experiences/>
+                <Projects/>
+                <Contract/>
             </div>
         </div>
     )
