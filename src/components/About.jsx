@@ -1,5 +1,6 @@
-import {ABOUT_TEXT} from '../constants'
+import { ABOUT_TEXT } from '../constants'
 import profilePic from '../assets/about.jpg'
+import { motion } from "framer-motion"
 
 export const About = () => {
     return (
@@ -9,12 +10,28 @@ export const About = () => {
             <div className="flex flex-wrap">
                 <div className="w-full lg:w-1/2 lg:p-8">
                     <div className="flex items-center justify-center">
-                        <img className="rounded-2xl" src={profilePic}/>
+                        <motion.img
+                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={
+                                {
+                                    duration: 1
+                                }
+                            }
+                            className="rounded-2xl" src={profilePic} />
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 lg:p-8 my-4">
                     <div className="flex items-center justify-center">
-                        <p className="tracking-tighter font-light max-w-xl"> {ABOUT_TEXT} </p>
+                        <motion.p
+                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ x: 100, opacity: 0 }}
+                            animate={
+                                {
+                                    duration: 1
+                                }
+                            }
+                            className="tracking-tighter font-light max-w-xl"> {ABOUT_TEXT} </motion.p>
                     </div>
 
                 </div>

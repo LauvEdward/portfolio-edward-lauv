@@ -1,16 +1,28 @@
-import {EXPERIENCES} from "../constants/index.js"
-
+import { EXPERIENCES } from "../constants/index.js"
+import { motion } from "framer-motion"
 export const Experiences = () => {
     return (
         <div className="border-b border-neutral-900 p-4">
-            <h1 className="text-center text-4xl pb-10">Experiences</h1>
+            <motion.h1
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -100 }}
+                transition={{ duration: 0.5 }}
+                className="text-center text-4xl pb-10">Experiences</motion.h1>
             <div>
                 {EXPERIENCES.map((EXPERIENCE, i) => (
                     <div key={i} className="border-neutral-500 flex flex-wrap lg:justify-center pt-5">
-                        <div className="w-full lg:w-1/4">
-                            <p className="text-neutral-400 text-sm">{EXPERIENCE.year}</p>
-                        </div>
-                        <div className="w-full max-w-xl lg:w-3/4">
+                        <motion.div
+                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: -100 }}
+                            transition={{ duration: 0.5 }}
+                            className="w-full pt-1 lg:w-1/4">
+                            <h6 className="text-neutral-400">{EXPERIENCE.year}</h6>
+                        </motion.div>
+                        <motion.div
+                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: 100 }}
+                            transition={{ duration: 0.5 }}
+                            className="w-full max-w-xl lg:w-3/4">
                             <h4 className="text-2xl">{EXPERIENCE.role} - {EXPERIENCE.company}</h4>
                             <p className="pt-5">{EXPERIENCE.description}</p>
                             <div className="flex flex-wrap">
@@ -19,7 +31,7 @@ export const Experiences = () => {
                                     </span>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 ))}
             </div>
